@@ -1,0 +1,67 @@
+.box--KiBx {
+  display: -ms-flexbox;
+  display: flex;
+  width: 225px;
+  height: 225px; }
+  .box--KiBx .face--3Vfu {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    border-width: 2px;
+    border-style: solid; }
+    .box--KiBx .face--3Vfu.front--3N3s {
+      border-color: red;
+      background-color: rgba(255, 0, 0, 0.5);
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center; }
+    .box--KiBx .face--3Vfu.side--33qE {
+      border-color: lime;
+      background-color: rgba(0, 255, 0, 0.5);
+      -webkit-transform: skewY(30deg) rotateY(63deg) translate(59%, -28%);
+              transform: skewY(30deg) rotateY(63deg) translate(59%, -28%); }
+    .box--KiBx .face--3Vfu.top--2uz4 {
+      border-color: blue;
+      background-color: rgba(0, 0, 255, 0.5);
+      -webkit-transform: skewX(60deg) rotateX(75deg) translate(-9%, -240%);
+              transform: skewX(60deg) rotateX(75deg) translate(-9%, -240%); }
+  .box--KiBx .edge--3Dfd {
+    width: 75px;
+    height: 2px;
+    position: absolute; }
+    .box--KiBx .edge--3Dfd.top--2uz4 {
+      background-color: magenta;
+      -webkit-transform: translate(40px, -20px);
+          -ms-transform: translate(40px, -20px);
+              transform: translate(40px, -20px); }
+    .box--KiBx .edge--3Dfd.right--3tcS {
+      background-color: yellow;
+      -webkit-transform: rotate(30deg) translate(90px, -64px);
+          -ms-transform: rotate(30deg) translate(90px, -64px);
+              transform: rotate(30deg) translate(90px, -64px);
+      width: 42px; }
+    .box--KiBx .edge--3Dfd.back--u_DA {
+      background-color: black;
+      width: 20px;
+      -webkit-transform: rotate(90deg) translate(-11px, -104px);
+          -ms-transform: rotate(90deg) translate(-11px, -104px);
+              transform: rotate(90deg) translate(-11px, -104px); }
+  .box--KiBx.opened--1QNn .face--3Vfu.top--2uz4 {
+    -webkit-transform: skewY(30deg) rotateY(45deg) rotateX(260deg) translate(-446%, -134%);
+            transform: skewY(30deg) rotateY(45deg) rotateX(260deg) translate(-446%, -134%); }
+.boxList--1aK8 {
+  display: -ms-flexbox;
+  display: flex; }
+html, body {
+  padding: 0;
+  margin: 0; }
+
+#app {
+  margin: 10%;
+  max-width: 1600px; }
