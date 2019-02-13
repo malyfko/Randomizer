@@ -1,0 +1,11 @@
+@import "src/styles/variables";
+
+.input {
+  margin-bottom: 100px;
+  width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid $gray;
+  font-size: 16px;
+  outline: none;
+}
