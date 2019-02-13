@@ -1,0 +1,68 @@
+@import "src/styles/variables";
+
+.box {
+  display: flex;
+  width: 225px;
+  height: 225px;
+
+  .face {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    display: flex;
+    border: {
+      width: 2px;
+      style: solid;
+    };
+
+    &.front {
+      border-color: $red;
+      background-color: rgba($red, .5);
+      color: rgb(255, 255, 255);
+      font-size: 30px;
+      font-weight: bold;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &.side {
+      border-color: $green;
+      background-color: rgba($green, .5);
+      transform: skewY(30deg) rotateY(63deg) translate(59%, -28%);
+    }
+
+    &.top {
+      border-color: $blue;
+      background-color: rgba($blue, .5);
+      transform: skewX(60deg) rotateX(75deg) translate(-9%, -240%);
+    }
+  }
+
+  .edge {
+    width: 75px;
+    height: 2px;
+    position: absolute;
+    &.top {
+      background-color: $magenta;
+      transform: translate(40px, -20px);
+    }
+
+    &.right {
+      background-color: $yellow;
+      transform: rotate(30deg) translate(90px, -64px);
+      width: 42px;
+    }
+
+    &.back {
+      background-color: $black;
+      width: 20px;
+      transform: rotate(90deg) translate(-11px, -104px);
+    }
+  }
+
+  &.opened {
+    .face.top {
+      transform: skewY(30deg) rotateY(45deg) rotateX(260deg) translate(-446%, -134%);
+    }
+  }
+}

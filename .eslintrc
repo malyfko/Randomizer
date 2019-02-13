@@ -1,0 +1,70 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "react-app"],
+  "root": true,
+  "rules": {
+    "camelcase": ["off"],
+    "eol-last": ["error", "always"],
+    "import/no-unresolved": "error",
+    "import/prefer-default-export": "off",
+    "import/no-named-as-default": "off",
+    "indent": [
+      "error",
+      2,
+      {
+        "FunctionDeclaration": { "body": 1, "parameters": 1 },
+        "FunctionExpression": { "body": 1, "parameters": 1 },
+        "SwitchCase": 1
+      }
+    ],
+    "max-len": ["error", 120],
+    "no-console": "warn",
+    "no-magic-numbers": ["error", { "ignore": [0, 1] }],
+    "no-mixed-operators": "error",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 1
+      }
+    ],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-shadow": "warn",
+    "operator-linebreak": ["error", "before"],
+    "prefer-const": ["error", {
+      "destructuring": "any",
+      "ignoreReadBeforeAssign": false
+    }],
+    "react-app/jsx-a11y/href-no-hash": "off",
+    "react/prefer-es6-class": ["error", "always"],
+    "react/jsx-closing-bracket-location": [
+      "warn",
+      {
+        "nonEmpty": "line-aligned",
+        "selfClosing": "line-aligned"
+      }
+    ],
+    "react/jsx-closing-tag-location": "warn",
+    "react/jsx-first-prop-new-line": [
+      "error",
+      "multiline-multiprop"
+    ],
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-pascal-case": "error",
+    "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
+    "react/no-unused-prop-types": "error",
+    "react/no-array-index-key": "error",
+    "react/no-string-refs": "error",
+    "react/jsx-wrap-multilines": "error",
+    "react/self-closing-comp": "warn",
+    "react/jsx-no-bind": "error",
+    "jsx-a11y/alt-text": "error",
+    "jsx-a11y/aria-role": ["error", {
+      "ignoreNonDOM": true
+    }],
+    "jsx-a11y/label-has-associated-control": "off"
+  },
+  "settings": {
+    "import/resolver": { "node": { "paths": ["src"] } }
+  }
+}

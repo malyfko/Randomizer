@@ -1,0 +1,61 @@
+{
+  "name": "Randomizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "start": "parcel index.html -p 3000 --open",
+    "build": "parcel build src/index.js"
+  },
+  "author": "Tetiana Platonova",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^9.1.0",
+    "classnames": "^2.2.6",
+    "postcss-modules": "^1.3.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-app": "^3.1.2",
+    "babel-preset-stage-0": "^6.24.1",
+    "enzyme": "^3.6.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.10.0",
+    "jest": "^23.5.0",
+    "jsdom": "^12.0.0",
+    "node-sass": "^4.9.3",
+    "parcel-bundler": "^1.9.7"
+  },
+  "jest": {
+    "testRegex": "((\\.|/)(test))\\.js$",
+    "moduleFileExtensions": [
+      "jsx",
+      "js"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "rootDir": "src",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "identity-obj-proxy"
+    }
+  }
+}

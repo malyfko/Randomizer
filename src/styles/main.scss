@@ -1,0 +1,13 @@
+@import "variables";
+
+:global {
+  html, body {
+    padding: 0;
+    margin: 0;
+  }
+
+  #app {
+    margin: 10%;
+    max-width: 1600px;
+  }
+}
