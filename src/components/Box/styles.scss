@@ -64,5 +64,12 @@
     .face.top {
       transform: skewY(30deg) rotateY(45deg) rotateX(260deg) translate(-446%, -134%);
     }
+
+    .icon {
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      transform: translate(100%, -100%);
+    }
   }
 }

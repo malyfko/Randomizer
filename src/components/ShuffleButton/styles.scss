@@ -1,0 +1,16 @@
+@import "src/styles/variables";
+
+.shuffleButton {
+  margin-left: 30px;
+  background-color: $purple;
+  color: $white;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid $white;
+  outline: none;
+
+  &:active {
+    padding: 12px 13px 8px 17px;
+  }
+}
