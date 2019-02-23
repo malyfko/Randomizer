@@ -64,12 +64,7 @@ export class App extends React.Component {
     return (
       <div>
         <h1>WarsawJS Meetup #54</h1>
-        <div>
-          <ReactHowler
-            src={fanfar}
-            playing={playing}
-            onEnd={() => { this.setState({ disableShuffle: false, playing: false }); }}
-          />
+        <div className="wrapper">
           <AmountInput
             onChange={value => this.handleAmountChange(value)}
             value={amount}
@@ -77,6 +72,11 @@ export class App extends React.Component {
           {!!amount && <ShuffleButton onClick={() => this.handleShuffle()} disabled={disableShuffle} />}
         </div>
         <BoxList amount={Number(amount)} openedBox={openedBox} winner={winner} />
+        <ReactHowler
+          src={fanfar}
+          playing={playing}
+          onEnd={() => { this.setState({ disableShuffle: false, playing: false }); }}
+        />
       </div>
     );
   }
