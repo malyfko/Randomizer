@@ -63,7 +63,7 @@ export class App extends React.Component {
 
     return (
       <div>
-        <h1>WarsawJS Meetup #54</h1>
+        <h1>WarsawJS Randomizer</h1>
         <div className="wrapper">
           <AmountInput
             onChange={value => this.handleAmountChange(value)}
