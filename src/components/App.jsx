@@ -1,9 +1,11 @@
 /* eslint-disable no-magic-numbers */
 import React from 'react';
+import ReactHowler from 'react-howler';
 
 import { BoxList } from 'components/BoxList';
 import { AmountInput } from 'components/AmountInput';
 import { ShuffleButton } from 'components/ShuffleButton';
+import fanfar from 'assets/fanfar.mp3';
 
 const pickRandom = total => Math.ceil(Math.random() * total);
 
@@ -16,6 +18,7 @@ export class App extends React.Component {
       disableShuffle: false,
       openedBox: null,
       winner: null,
+      playing: false,
     };
   }
 
@@ -25,6 +28,7 @@ export class App extends React.Component {
       disableShuffle: true,
       openedBox: null,
       winner: null,
+      playing: true,
     });
     let openedBox;
 
@@ -37,10 +41,9 @@ export class App extends React.Component {
     setTimeout(() => {
       clearInterval(interval);
       this.setState({
-        disableShuffle: false,
         winner: openedBox,
       });
-    }, 10000);
+    }, 8000);
   }
 
   handleAmountChange(value) {
@@ -55,12 +58,18 @@ export class App extends React.Component {
       disableShuffle,
       openedBox,
       winner,
+      playing,
     } = this.state;
 
     return (
       <div>
         <h1>WarsawJS Meetup #54</h1>
         <div>
+          <ReactHowler
+            src={fanfar}
+            playing={playing}
+            onEnd={() => { this.setState({ disableShuffle: false, playing: false }); }}
+          />
           <AmountInput
             onChange={value => this.handleAmountChange(value)}
             value={amount}
