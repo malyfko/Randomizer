@@ -44,7 +44,7 @@ export class App extends React.Component {
   }
 
   handleAmountChange(value) {
-    if (/^\d+(\d*)?$/.test(value) || value === '') {
+    if ((/^\d+(\d*)?$/.test(value) || value === '') && Number(value) <= 50) {
       this.setState({ amount: value });
     }
   }

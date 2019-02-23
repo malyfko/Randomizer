@@ -7,7 +7,7 @@ export const AmountInput = ({ value, onChange }) => (
   <input
     className={styles.input}
     type="text"
-    placeholder="Enter amount of participants"
+    placeholder="Enter amount of participants (50 max)"
     value={value}
     onChange={(event) => {
       event.preventDefault();
