@@ -5,7 +5,7 @@ import ReactHowler from 'react-howler';
 import { BoxList } from 'components/BoxList';
 import { AmountInput } from 'components/AmountInput';
 import { ShuffleButton } from 'components/ShuffleButton';
-import fanfar from 'assets/fanfar.mp3';
+import sound from 'assets/stranger_things.mp3';
 
 const pickRandom = total => Math.ceil(Math.random() * total);
 
@@ -30,20 +30,23 @@ export class App extends React.Component {
       winner: null,
       playing: true,
     });
-    let openedBox;
 
-    const interval = setInterval(() => {
-      openedBox = pickRandom(Number(amount));
-      this.setState({
-        openedBox,
-      });
-    }, 400);
+    let interval;
+    setTimeout(() => {
+      interval = setInterval(() => {
+        this.setState({
+          openedBox: pickRandom(Number(amount)),
+        });
+      }, 360);
+    }, 3000);
     setTimeout(() => {
       clearInterval(interval);
+      const winner = pickRandom(Number(amount));
       this.setState({
-        winner: openedBox,
+        winner,
+        openedBox: winner,
       });
-    }, 8000);
+    }, 9050);
   }
 
   handleAmountChange(value) {
@@ -73,7 +76,7 @@ export class App extends React.Component {
         </div>
         <BoxList amount={Number(amount)} openedBox={openedBox} winner={winner} />
         <ReactHowler
-          src={fanfar}
+          src={sound}
           playing={playing}
           onEnd={() => { this.setState({ disableShuffle: false, playing: false }); }}
         />

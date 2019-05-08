@@ -5,13 +5,14 @@ import classnames from 'classnames';
 
 import ghostEmoji from 'assets/ghost.png';
 import omgIcon from 'assets/omg.png';
+import el from 'assets/Eleven.jpg';
 import webstorm from 'assets/webstorm.png';
 import styles from './styles.scss';
 
 export const Box = ({ opened, winner, number }) => {
   let icon;
   if (opened && !winner) {
-    icon = number % 2 === 0 ? ghostEmoji : omgIcon;
+    icon = el;
   }
 
   if (winner) {

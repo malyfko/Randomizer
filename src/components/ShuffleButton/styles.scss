@@ -17,7 +17,24 @@
   }
 
   &:disabled {
-    padding: 0;
+    &.red {
+      background-color: $red;
+    }
+
+    &.green {
+      background-color: $green;
+    }
+
+    &.blue {
+      background-color: $blue;
+    }
+
+    &.magenta {
+      background-color: $magenta;
+    }
+    &.yellow {
+      background-color: $yellow;
+    }
   }
 
   &:active {
