@@ -12,7 +12,7 @@ import styles from './styles.scss';
 export const Box = ({ opened, winner, number }) => {
   let icon;
   if (opened && !winner) {
-    icon = el;
+    icon = number % 2 === 0 ? ghostEmoji : omgIcon;
   }
 
   if (winner) {
