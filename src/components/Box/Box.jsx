@@ -5,7 +5,6 @@ import classnames from 'classnames';
 
 import ghostEmoji from 'assets/ghost.png';
 import omgIcon from 'assets/omg.png';
-import el from 'assets/Eleven.jpg';
 import webstorm from 'assets/webstorm.png';
 import styles from './styles.scss';
 
